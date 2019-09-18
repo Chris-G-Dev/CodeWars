@@ -13,13 +13,19 @@ function duplicateEncode(word){
   const letters = word.toLowerCase().split('');
   let result = '';
 
+  // Loop through characters to see if it's been added to 'charSet' yet.
+  // If so, add 1. If not, create it and set it to 1  
   for (let char of letters) {
     charSet[char] ? charSet[char]++ : charSet[char] = 1;
   }
 
+  /* 
+  Map over letters. Check value in charSet for each letter 
+  If equal to 1, return '('. Otherwise, return ')'.
+  */
   letters.map((char) => {
     charSet[char] === 1 ? result += '(' : result += ')';
-  }).join('');
+  });
   
   return result;
 }

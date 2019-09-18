@@ -22,6 +22,14 @@ The string has a length greater or equal to one and contains only letters
 from a to z.
 */
 
+/* Solution Explanation:
+1 - Declare a variable of the good characters (goodChars)
+2 - Loop through characters in argument, 's'. If the character isn't 
+    included in goodChars, add 1 to badChars.
+3 - Using a template literal, return the badChars divided by the
+    length of the passed argument, 's'
+*/
+
 function printerError(s) {
   const goodChars = ("abcdefghijklm");
   let badChars = 0;

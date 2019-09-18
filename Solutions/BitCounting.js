@@ -3,13 +3,15 @@
 /* Details:
 Write a function that takes an integer as input, and returns the 
 number as bits that are equal to one in the binary representation
-of that number. You can guaranteen that input is non-negative.
+of that number. You can guarantee that input is non-negative.
 
 The binary representation of 1234 is 10011010010, so the function
 return 5 in this case.
 */
 
 function countBits(n) {
+  // Convert int to base ten, split number into array.
+  // Filter array to only have 1's, then get the length.
   return n
   .toString(2)
   .split('')

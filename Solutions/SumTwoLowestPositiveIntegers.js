@@ -9,7 +9,13 @@ the output should be 7.
 [10, 343445353, 3453445, 3453545353453] should return 3453455.
 */
 
-function sumTwoSmallestNumbers(numbers) {  
+/* Solution Explanation:
+1 - Sorts array from low to high with .sort method, then removes 
+    negative numbers with the .filter method.
+2 - Returns the sum of the two lowest numbers left in the sorted variable.
+*/
+
+function sumTwoSmallestNumbers(numbers) { 
   let sorted = numbers
     .sort((a, b) => a - b)
     .filter(a => a > 0);

@@ -8,6 +8,16 @@ being returned. The valid decimal values for RGB are 0 - 255. Any
 rounded to the closest valid value.
 */
 
+/* Solution Explanation 
+1 - For loop with if statement inside checks each value (r, g, b). 
+    If the value is between 0-255, convert to hexadecimal with 
+    toString(16), set to uppercase, & push to the variable, hex.
+2 - Iterate over hex using the map method. If length is less than 2, 
+    add 0 before the value. Leading zeros on values are lost during 
+    the conversion to hexadecimal in the for loop. After iteration, 
+    join array together into a string and return.
+*/
+
 function rgb(...values) {
   let hex = [];
   for (let val of values) {

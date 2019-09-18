@@ -7,6 +7,15 @@ because 92 is 81 and 12 is 1.
 Note: The function accepts an integer and returns an integer
 */
 
+/* Solution Explanation:
+1 - Declare variable to hold the numbers. Turn the number into a string,
+    and split it into individual numbers.
+2 - Run our numArray through a for of loop. Due to type coercion, even
+    though our values are now strings, we can still multiply them together
+    to return the square of each number, and push it to result.
+3 - Return result after joining the values back into a string. Then using
+    parseInt, turn the string back into a numerical value.
+*/
 function squareDigits(num){
   //may the code be with you
   const numArray = num.toString().split('')
